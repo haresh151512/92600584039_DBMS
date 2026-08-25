@@ -1,0 +1,24 @@
+--EX-6.WRITE A PL/SQL BLOCK WHICH ACCEPTS MEASUREMENT IN FEET AND DISPLAYS IT IN CM, INCH AND METER.
+
+SET SERVEROUTPUT ON;
+
+DECLARE
+    FEET  REAL;
+    CM    REAL;
+    INCH  REAL;
+    METER REAL;
+
+BEGIN
+    FEET:=&ENTER_FEET;
+    INCH  := FEET * 12;
+    CM    := FEET * 30.48;
+    METER := FEET * 0.3048;
+
+    DBMS_OUTPUT.PUT_LINE('---------------------------');
+    DBMS_OUTPUT.PUT_LINE('FEET        : ' || FEET);
+    DBMS_OUTPUT.PUT_LINE('INCHES      : ' || INCH);
+    DBMS_OUTPUT.PUT_LINE('CENTIMETERS : ' || CM);
+    DBMS_OUTPUT.PUT_LINE('METERS      : ' || METER);
+    DBMS_OUTPUT.PUT_LINE('---------------------------');
+END;
+/

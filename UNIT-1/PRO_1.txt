@@ -1,0 +1,13 @@
+
+------------------area of circal------------------------
+SET SERVEROUTPUT ON
+DECLARE 
+	r real;
+	area real;
+BEGIN
+	r:=&r;
+	area:=3.14*r*r;
+	dbms_output.put_line('area of circal:' || area);
+	
+END;
+/
